@@ -8,7 +8,7 @@ var path = require('path');
 var databaseUri = 'mongodb://heroku_9b0mkch5:vu8fvo6p33nb8av0nnke8ef9ql@ds015720.mlab.com:15720/heroku_9b0mkch5';
 
 var api = new ParseServer({
-  databaseURI: databaseUri || 'mongodb://localhost:27017/dev',
+  databaseURI: databaseUri || 'mongodb://heroku_9b0mkch5:vu8fvo6p33nb8av0nnke8ef9ql@ds015720.mlab.com:15720/heroku_9b0mkch5',
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
   appId: 'myAppIdskool',
   masterKey: process.env.MASTER_KEY || 'myMasterKeyskool', //Add your master key here. Keep it secret!
