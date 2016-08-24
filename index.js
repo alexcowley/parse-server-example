@@ -8,17 +8,11 @@ var path = require('path');
 var databaseUri = 'mongodb://heroku_9b0mkch5:vu8fvo6p33nb8av0nnke8ef9ql@ds015720.mlab.com:15720/heroku_9b0mkch5';
 
 var api = new ParseServer({
-  databaseURI: databaseUri || 'mongodb://heroku_9b0mkch5:vu8fvo6p33nb8av0nnke8ef9ql@ds015720.mlab.com:15720/heroku_9b0mkch5',
+    databaseURI: databaseUri || 'mongodb://localhost:27017/dev',
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
-  appId: 'myAppIdskool',
-  masterKey: process.env.MASTER_KEY || 'myMasterKeyskool', //Add your master key here. Keep it secret!
-  serverURL: process.env.SERVER_URL || 'http://skooldatabase1.herokuapp.com/parse',  // Don't forget to change to https if needed
-  push: {
-    ios: {
-      pfx: '/alexcowley/Documents/Skool/ParsePushDevelopmentCertificate.p12',
-      production: false
-    }
-  },
+  appId: process.env.APP_ID || 'myAppId',
+  masterKey: process.env.MASTER_KEY || '', //Add your master key here. Keep it secret!
+  serverURL: process.env.SERVER_URL || 'http://localhost:1337/parse',  // Don't forget to change to https if needed
   liveQuery: {
     classNames: ["Posts", "Comments"] // List of classes to support for query subscriptions
   }
