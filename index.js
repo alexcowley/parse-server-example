@@ -18,7 +18,7 @@ var api = new ParseServer({
       pfx: '/alexcowley/Documents/Skool/ParsePushDevelopmentCertificate.p12',
       production: false
     }
-  }
+  },
   liveQuery: {
     classNames: ["Posts", "Comments"] // List of classes to support for query subscriptions
   }
