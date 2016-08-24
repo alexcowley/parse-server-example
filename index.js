@@ -13,6 +13,13 @@ var api = new ParseServer({
   appId: process.env.APP_ID || 'myAppIdskool',
   masterKey: process.env.MASTER_KEY || 'myMasterKeyskool', //Add your master key here. Keep it secret!
   serverURL: process.env.SERVER_URL || 'http://skooldatabase1.herokuapp.com/parse',  // Don't forget to change to https if needed
+  push: {
+    ios: {
+        pfx: '/Users/alexcowley/Documents/Skool/ParsePushDevelopmentCertificate.p12',
+        bundleId: 'com.alexcowley.Skool',
+        production: false
+    }    
+  },
   
   liveQuery: {
     classNames: ["Posts", "Comments"] // List of classes to support for query subscriptions
