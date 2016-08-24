@@ -12,7 +12,7 @@ var api = new ParseServer({
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
   appId: 'myAppIdskool',
   masterKey: process.env.MASTER_KEY || 'myMasterKeyskool', //Add your master key here. Keep it secret!
-  serverURL: process.env.SERVER_URL || 'http://skooldatabase1.herokuapp.com',  // Don't forget to change to https if needed
+  serverURL: process.env.SERVER_URL || 'http://skooldatabase1.herokuapp.com/parse',  // Don't forget to change to https if needed
   push: {
     ios: {
       pfx: '/alexcowley/Documents/Skool/ParsePushDevelopmentCertificate.p12',
